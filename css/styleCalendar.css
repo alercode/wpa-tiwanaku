@@ -1,0 +1,446 @@
+h3,h4,h5 {
+    font-weight: 300 !important;
+ }
+ .content-wrapper{
+     width:600px;
+ }
+ .calendar-wrapper {
+    /* height: auto; */
+    /* max-width: 730px; */
+    width: 100%;
+    /* margin: 0 auto; */
+ }
+ 
+ .calendar-header {
+    background-color: rgb(134, 134, 134);
+    height: 100%;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    position: relative;
+ }
+ 
+ .header-title {
+    padding-left: 15%;
+ }
+ 
+ .header-background {
+    /* background-image: url("https://raw.githubusercontent.com/JustMonk/codepen-resource-project/master/img/compressed-header.jpg"); */
+    height: 100px;
+    background-position: center right;
+    background-size: cover;
+ }
+ 
+ .calendar-content {
+    padding: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+    overflow: hidden;
+ }
+ 
+ /*.event-mark {
+    width: 5px;
+    height: 5px;
+    background-color: teal;
+    border-radius: 100px;
+    position: absolute;
+    left: 46%;
+    top: 70%;
+ }*/
+ 
+ .calendar-footer {
+    height: 270px;
+    padding: 50px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background-color: #696969 !important;
+    position: relative;
+    overflow: hidden;
+ }
+ 
+ .addForm {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #696969;
+    transition: top 0.5s cubic-bezier(1, 0, 0, 1);
+    padding: 15px 25px 0 55px;
+ }
+ .group-inp{
+     padding: 5px 10px 0px 10px;
+     display: inline-block;
+     
+ }
+ .group-inp label{
+     padding: 5px 20px 5px 10px;
+     width: 240px;
+ }
+ .addForm input {
+    color: #fff;
+ }
+ 
+ .inp-calendar{
+     margin-left:30px;
+    width: 80px;
+    padding: 0px 0px 0px 40px; 
+    background:none;
+    line-height: 2.4em;
+    color: #fff;
+    border-radius:0;
+    font-weight: 300;
+    letter-spacing: 0px;
+    letter-spacing: 0.02rem;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+  }
+  .inp-calendar:focus{
+    border-bottom: 2px solid rgb(241, 180, 13);
+      box-shadow: none;
+      outline: 0 none;
+      background: none;
+      color: #fff;
+  }
+ .addForm label{
+    text-align: left;
+    color: #fff;
+ }
+ .blue.lighten-3 {
+    background-color: #d6e6f2 !important;
+}
+ .addForm h4 {
+     text-align: center;
+    color: #fff;
+    margin-bottom: 1rem;
+ }
+ 
+ .addEventButtons {
+     margin-top: 10px;
+    text-align: center;
+    padding: 0 0.75rem 0 0.75rem;
+    color: #fff;
+ }
+ 
+ .addEventButtons a {
+    color: #fff;
+    font-weight: 300;
+ }
+
+ .btn-cal{
+     width: 120px;
+ }
+ 
+ .emptyForm {
+     text-align: center;
+    margin-top:20px;
+    padding: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+ }
+ 
+ .emptyForm h4 {
+    color: #fff;
+    margin-bottom: 2rem;
+ }
+ 
+ .sidebar-wrapper {
+    color: #fff;
+    background-color: #ce9805 !important;
+    padding-top: 0;
+    padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding-left: 0;
+    padding-right: 0;
+ }
+ 
+ .sidebar-title {
+    padding: 50px 6% 50px 12%;
+ }
+ 
+ .sidebar-title h4 {
+    margin-top: 0;
+ }
+ 
+ .sidebar-events {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-bottom: 70px;
+ }
+
+ .empty-message-er,
+ .empty-message {
+    font-size: 1.2rem;
+    padding: 15px 6% 15px 12%;
+ }
+ 
+ .eventCard {
+    background-color: #fff;
+    color: black;
+    padding: 12px 24px 12px 24px;
+    border-bottom: 1px solid #E5E5E5;
+    white-space: nowrap;
+    position: relative;
+    animation: slideInDown 0.5s;
+ }
+ .eventCard-description-foot,
+ .eventCard-description,
+ .eventCard-header{
+   width: 50px;
+ }
+ .fecha-inp,
+ .label-header,
+ .eventCard-header {
+    font-weight: bold;
+    background-color: #fff;
+    border: none!important;
+    clear:left;
+ }
+
+.label-description,
+.eventCard-description {
+    color: #6e6e6e;
+    font-weight: 600;
+    background-color: #fff;
+    border: none!important;
+    clear:left;
+    
+ }
+ .label-description-foot,
+ .eventCard-description-foot{
+    color: #5e5e5e;
+    font-weight: 600;
+    background-color: #fff;
+    border: none!important;
+    clear:left;
+ }
+ .eventCard-mark-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 60px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%);
+ }
+ 
+ .eventCard-mark {
+    width: 8px;
+    height: 8px;
+    background-color: #facc2e;
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+ }
+ 
+ .day-mark {
+    width: 7px;
+    height: 7px;
+    background-color: #facc2e;
+    border-radius: 100px;
+    position: absolute;
+    left: 47%;
+    top: 67%;
+ }
+  
+ #table-body .col:hover {
+    cursor: pointer;
+    /*border: 1px solid grey;*/
+    background-color: #E0E0E0;
+ }
+ 
+ .empty-day:hover {
+    cursor: default !important;
+    background-color: #fff !important;
+ }
+#table-header .row .col{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 550;
+    font-size:15px; 
+ }
+ #table-body .row .col {
+    
+    padding: .75rem;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size:14px; 
+ }
+ 
+ #table-body .col {
+    border: 1px solid transparent;
+ }
+ 
+ /* #table-body {} */
+ 
+ #table-body .row {
+    margin-bottom: 0;
+ }
+ 
+ #table-body .col {
+    padding-top: 1.3rem !important;
+    padding-bottom: 1.3rem !important;
+ }
+ 
+ #calendar-table {
+    text-align: center;
+ }
+ 
+ .prev-button {
+    position: absolute;
+    cursor: pointer;
+    left: 3%;
+    top: 17%;
+    color: rgb(255, 255, 255) !important;
+ }
+ 
+ .prev-button i {
+    font-size: 4em;
+ }
+ 
+ .next-button {
+    position: absolute;
+    cursor: pointer;
+    right: 3%;
+    top: 17%;
+    color: rgb(255, 255, 255) !important;
+ }
+ 
+ .next-button i {
+    font-size: 4em;
+ }
+ 
+ .addEvent {
+    box-shadow: 0 5px 15px rgb(57, 168, 228);
+    background-color: #39a8e4;
+    padding: 10px;
+    padding-left: 3em;
+    padding-right: 3em;
+    cursor: pointer;
+    border-radius: 25px;
+    color: #fff !important;
+    background-image: linear-gradient(135deg, #8d8dd4, #45ced4);
+ }
+ 
+ /*.addEvent:hover {
+    transition: box-shadow 0.5s; 
+    box-shadow: 0 4px 25px rgb(57, 168, 228);
+ }*/
+ 
+ 
+ @media(max-width:1200px){
+    .content-wrapper{
+        width:530px;
+    }
+    #table-header .row .col{
+        padding: 0%; 
+     }
+ }
+ 
+ @media (max-width:992px) {
+    .content-wrapper {
+       margin-left: 0;
+    }
+    
+    .calendar-wrapper {
+       margin-top: 10px;
+    }
+    .sidebar-wrapper {
+       background-color: #EEEEEE !important;
+       margin-top: 10px; 
+       width: 500px;
+       margin-left: 2.7%;   
+    }
+    .sidebar-title {
+       background-color: #ce9805 !important;
+    }
+    .empty-message {
+       color: black;
+    }
+ }
+ 
+ @media (max-width:767px) {
+    .content-wrapper .container {
+       width: auto;
+       padding: 0%;
+    }
+    .calendar-content {
+       padding-left: 13%;
+       padding-right: 13%;
+    }
+    .sidebar-wrapper {
+        width: 100%;
+        margin-left: 0%;   
+     }
+    body .row {
+       margin-bottom: 0;
+    }
+     .emptyForm {
+        margin-top:40px;
+     }
+     .addForm {
+        padding: 20px 0px 0px 0px;
+    }
+    .addForm h4{
+        font-size: 22px;
+    }
+    .group-inp{
+        display: block;
+        text-align: center;
+        padding: 5px 5px 0px 0px;
+    }
+    .group-inp label{
+        font-size: 16px;
+        font-weight: 500;
+        width:230px; 
+        
+    }
+    .inp-calendar{
+        margin-left:0px;
+        width: 80px;
+        padding: 0px 0px 0px 10px; 
+        
+    }
+     
+ }
+ 
+ @media (max-width:450px) {
+    .calendar-content {
+        padding-left: 5%;
+        padding-right: 5%;
+     }
+    .content-wrapper {        
+       padding-left: 0;
+       padding-right: 0;
+    }
+    .content-wrapper .container {
+       padding-left: 0;
+       padding-right: 0;
+    }
+    .emptyForm {
+        margin-top:40px;
+    }
+    .addForm {
+        padding: 20px 0px 0px 0px;
+    }
+    .addForm h4{
+        font-size: 20px;
+    }
+    .group-inp{
+        padding: 5px 5px 0px 0px;
+    }
+    .group-inp label{
+        font-size: 14px;
+        font-weight: 550;
+        width:220px; 
+    }
+    .inp-calendar{
+        margin-left:0px;
+        width: 60px;
+        padding: 0px 0px 0px 10px; 
+    }
+    
+ }

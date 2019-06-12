@@ -1,0 +1,132 @@
+<!-- NAVIGATION -->
+<nav id="navigation">
+			
+
+        <!-- container -->
+        <div class="container contenedor-menu">
+            <!-- responsive-nav -->
+            <div id="responsive-nav">
+                <!-- NAV -->
+                <ul class="main-nav nav">
+                    <li class="active nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="drop nav-item"><a class="nav-link" href="#">Tiwanaku</a>
+                        <div class="dropdownContain">
+                            <div class="dropOut" id="dropOut1">
+                                <ul class="submenu">
+                                    <li><a href="/tiwanaku-sitio-arqueologico">Tiwanaku - Sitio arqueológico</a></li>
+                                    <li><a href="/tiwanaku-museos">Tiwanaku - Museos</a></li>
+                                    <li><a href="/patrimonio-mundial-de-la-humanidad">Patrimonio Mundial</a></li>
+                                    <li><a href="http://whc.unesco.org/en/list/567">Sitio Oficial de la UNESCO</a></li>
+                                    <li><a href="http://tiwanaku.gob.bo/backup19102018/lasmac2017">Lasmac 2017</a></li>							
+                                </ul>	
+                            </div>	
+                        </div>
+                    </li>
+                    <li class="drop nav-item"><a class="nav-link" href="#">Información Turística</a>
+                        <div class="dropdownContain">
+                            <div class="dropOut" id="dropOut1">
+                                <ul class="submenu">
+                                    <li><a href="/como-llegar">¿Cómo llegar a Tiwanaku?</a></li>
+                                    <li><a href="/circuitos-turisticos">Circuitos Turísticos</a></li>
+                                    <li><a href="/hospedajes-y-restaurants-en-tiwanaku">Hospedajes y restaurants</a></li>
+                                    <li><a href="/tiwanaku-servicios">Servicios - Preguntas frecuentes</a></li>							
+                                </ul>	
+                            </div>	
+                        </div>
+                    </li>
+                    <li class="drop nav-item"><a class="nav-link" href="/eventos">Eventos</a></li>
+                    <li class="drop nav-item"><a class="nav-link" href="#">Multimedia</a>
+                        <div class="dropdownContain">
+                            <div class="dropOut" id="dropOut1">
+                                <ul class="submenu">
+                                    <li><a href="/galeria-fotografica">Galeria Fotográfica</a></li>							
+                                </ul>	
+                            </div>	
+                        </div>
+                    </li>
+                    <li class="drop nav-item"><a class="nav-link" href="/contacto-us">Contacto</a></li>
+                    <li class="drop nav-item"><a class="nav-link" href="#">Reservas</a>
+                        <div class="dropdownContain">
+                            <div class="dropOut" id="dropOut1">
+                                <ul class="submenu">
+                                    <li><a href="/informacion-reserva">Cómo reservar?</a></li>
+                                    <%if(!nombreUsuario) {%>
+                                        <li><a href="/logueo">Reservar Ticket</a></li>
+                                        <li><a href="/logueo">Ver mis Reservas</a></li>
+                                    <% }else{%>
+                                        <li><a href="/reserva-ticket">Reservar Ticket</a></li>
+                                        <li><a href="/ver-reserva">Ver mis Reservas</a></li>
+                                    <% }%>
+                                    <li><a href="/registro">Registrarse</a></li>
+                                    <li><a href="/logueo">Loguearse</a></li>
+                                    <!-- <li><a href="" data-toggle="modal" data-target="#login">Loguearse</a></li>							 -->
+                                </ul>	
+                            </div>	
+                        </div>
+                    </li>
+                    <li class="drop nav-item"><a class="nav-link" href="#"><img src="./img/es.png" alt="es" title="Español">&nbsp Español (España)</a>
+                        <div class="dropdownContain">
+                            <div class="dropOut" id="dropOut1">
+                                <ul>
+                                    <li><a href="https://tiwanaku.gob.bo/?lang=en"><img src="./img/en.png" alt="en" title="English">&nbsp ENGLISH (INGLÉS)</a></li>							
+                                </ul>	
+                            </div>	
+                        </div>
+                    </li>
+                    <%if(!nombreUsuario){%>
+                        
+                    <% } else{%>
+                        <div class="div-logueo">
+                                <li class="drop nav-item"><a class="nav-link" href="#"><i id="ic-logueo" class="fas fa-user-circle"></i><p><%=nombreUsuario%></p></a>
+                                    <div class="dropdownContain">
+                                        <div class="dropOut" id="dropOut1">
+                                            <ul class="submenu">
+                                                <li><a href="/logout">Cerrar sesión</a></li>
+                                            </ul>	
+                                        </div>	
+                                    </div>
+                                </li>  
+                        </div>
+                    <% }%>
+                </ul>
+                <!-- /NAV -->
+            </div>
+            <!-- /responsive-nav -->
+        </div>
+        <!-- /container -->
+    </nav>
+    <!-- /NAVIGATION -->
+
+    <!-- Modal -->
+<!-- <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body log-body">
+                <button type="button" class="close close-log" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                
+                <form action="/" id="loginForm" method="POST" autocomplete="off" class="full-box logInForm">
+                    <p class="text-center"><i id="img-cab" class="fa fa-user-circle fa-5x"></i></p>
+                    <p id="text-cab" class="text-center text-uppercase">Inicia sesión con tu cuenta</p>
+                    <div class="group" for="inp">
+                        <label class="label">E-mail</label>
+                        <i class="ico-log1	fa fa-envelope-o"></i>
+                        <input class="inp form-control" name="usuario" id="name" type="text" placeholder="Escribe tú E-mail">
+                    </div>
+                    <div class="group">
+                        <label class="label" for="UserPass">Contraseña</label>
+                        <i class="ico-log2 fa fa-lock"></i>
+                        <input class="inp form-control" name="clave" id="pass" type="password" placeholder="**************">
+                    </div>
+                    <div class="resp_login" id="resp_login">
+                            <%= mensajeError%>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="submit" value="Iniciar sesión" class="butn text-uppercase">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->

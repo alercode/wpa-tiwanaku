@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sitio oficial del Centro Espiritual y Político de la Cultura Tiwanaku / Official Site Spiritual and Political Center of the Tiwanaku Culture &#8211; El complejo arqueológico más grande de Bolivia / The largest archaeological complex in Bolivia</title>
+    
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css"/>
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="./css/all.min.css">
+
+	<!-- estilos css -->
+	<link type="text/css" rel="stylesheet" href="./css/style.css"/>
+	<link type="text/css" rel="stylesheet" href="./css/styleCalendar.css"/>
+
+	<meta name="theme-color" content="#F0DB4F">
+  	<meta name="MobileOptimized" content="width">
+  	<meta name="HandheldFriendly" content="true">
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+ 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<link rel="shortcut icon" type="image/png" href="./img/icon_16.png">
+  	<link rel="apple-touch-icon" href="./img/touch/icon_32x32.png">
+  	<link rel="apple-touch-startup-image" href="./img/icon_1024.png">
+  	<link rel="manifest" href="./manifest.json">
+    
+</head>
+<body>
+    <!-- header-->
+	<header>
+		<!-- Top header-->
+		<div id="top-header" >
+			<div class="container">
+				<div class="row">
+					<div  class="header-links header-izq">
+						<ul>
+							<li><a href="#"><i class="fas fa-globe-americas"></i> Welcome / Bienvenido</a></li>
+							<li><a href="#"><i class="fas fa-phone"></i> (+591) 2 2896605</a></li>
+							<li><a href="#"><i class="far fa-envelope"></i> contacto@tiwanaku.gob.bo</a></li>
+						</ul>
+					</div>
+					<div class="header-links header-der">
+						<ul >
+							<li><a href="#"><img class="fa fa-facebook" src="./img/faceb.png" alt=""></a></li>
+							<li><a href="#"><img class="fa fa-youtube" src="./img/ytube2.png" alt=""></a></li>
+						</ul>
+					</div>
+					
+				</div>
+					
+					
+			</div>
+		</div>
+		<!-- End header-->
+
+		<!-- HEADER UPPER -->
+		<div id="header">
+			<!-- container -->
+			<div class="container-fluid">
+				<!-- row -->
+				<div class="row">
+					<!-- LOGO -->
+					<div class="col-12 col-sm-12 col-md-3 col-lg-4">
+						<div class="header-logo">
+							<a href="index.html" class="logo">
+								<img src="./img/logo_byn_wt.png" alt="">
+							</a>
+						</div>
+					</div>
+					<!-- /LOGO -->
+
+					<!-- SEARCH BAR -->
+					<div id="cabezera" class="col-sm-12 col-md-9 col-lg-8">
+						<div class="row">
+
+							<div class="upper-column info-box  col-sm-6 col-md-4 col-lg-4">
+								<div class="icon">
+									<div class="icon-box">
+										<i class="fas fa-map-marker-alt"></i>
+									</div>
+								</div>
+								
+								<div class="header-icon">
+									<p>Avenida Manco Kapac, provincia Ingavi - Tiwanaku, La Paz, Bolivia </p>
+								</div>
+							</div>
+			
+							<div class="upper-column info-box  col-sm-6 col-md-4 col-lg-4">
+								<div class="icon">
+									<div class="icon-box">
+										<i class="far fa-clock"></i>
+									</div>
+								</div>
+								
+								<div class="header-icon">
+									<p>9AM to 17PM Lun/Dom <br> (Mon/Sun)</p> 
+								</div>
+							</div>
+									
+							<div class="upper-column info-box  col-sm-12 col-md-4 col-lg-4">
+								<a href="#" class="quote-btn theme-btn btn-style-one" data-slimstat="5">
+									<div class="btn-style-onee">
+										¿Cómo llegar?/How to get there?
+									</div>
+								</a>
+							</div>
+						</div>
+						
+					</div>
+					<!-- /SEARCH BAR -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- / HEADER UPPER -->
+	</header>
+	<!-- End header-->
+
+    <!-- VENTANA MODAL Y MENU RESPOSIVE-->
+	<div id="fade" class="nav-responsive"></div>
+
+	<nav>
+		<!-- responsive-nav -->
+		<div id="responsive-navar">
+			<!-- <div class="cab-menu-resp"> -->
+			<div class="full-box dashboard-sideBar-UserInfo">
+				<figure class="full-box">
+					<img src="./img/us.png" alt="UserIcon">
+					<figcaption class="text-center text-titles"><%=nombreUsuario%></figcaption>
+				</figure>
+				
+				<ul class="full-box list-unstyled text-center">
+						<%if(!nombreUsuario){%>
+							<li>
+								<a href="logueo.html">Logueo</a>
+							</li>
+							<li id="separador_menu"></li>
+							<li>
+								<a href="registro.html" > Registrarse</a>
+							</li>
+						<% } else{%>
+						<li>
+							<a href="#!">
+								<i class="fas fa-cog"></i>
+							</a>
+						</li>
+						<li>
+							<a href="/logout" class="btn-exit-system">
+								<i class="fas fa-power-off"></i>
+							</a>
+						</li>
+					<% }%>
+				</ul>
+			</div>
+			<!-- NAV -->
+			<div class="menu">
+
+				<ul class="menu-responsive">
+					<li class="drop-r"><a class="cont-r" href="index.html">Inicio</a></li>
+					<li class="drop-r">
+						<a class="cont-r" href="#">Tiwanaku <i id="ic-menu-resp" class="fas fa-chevron-down" aria-hidden="true"></i></a>	
+						<ul class="submenu-r">
+							<li><a href="tiwanaku.html">Tiwanaku - Sitio arqueológico</a></li>
+							<li><a href="museos.html">Tiwanaku - Museos</a></li>
+							<li><a href="patrimonio.html">Patrimonio Mundial</a></li>
+							<li><a href="http://whc.unesco.org/en/list/567">Sitio Oficial de la UNESCO</a></li>
+							<li><a href="http://tiwanaku.gob.bo/backup19102018/lasmac2017">Lasmac 2017</a></li>							
+						</ul>
+					</li>
+					<li class="drop-r">
+						<a class="cont-r" href="#">Información Turística <i id="ic-menu-resp" class="fas fa-chevron-down" aria-hidden="true"></i></a>
+						<ul class="submenu-r">
+							<li><a href="como-llegar">¿Cómo llegar a Tiwanaku?</a></li>
+							<li><a href="circuito_turistico.html">Circuitos Turísticos</a></li>
+							<li><a href="hospedaje_restaurant.html">Hospedajes y restaurants</a></li>
+							<li><a href="servicios.html">Servicios - Preguntas frecuentes</a></li>							
+						</ul>		
+					</li>
+					<li class="drop-r"><a class="cont-r" href="eventos.html">Eventos</a></li>
+					<li class="drop-r">
+						<a class="cont-r" href="#">Multimedia <i id="ic-menu-resp" class="fas fa-chevron-down" aria-hidden="true"></i></a>
+						<ul class="submenu-r">
+							<li><a href="galeria_fotografica.html">Galeria Fotográfica</a></li>							
+						</ul>		
+					</li>
+					<li class="drop-r"><a class="cont-r" href="contacto.html">Contacto</a></li>
+					<li class="drop-r">
+						<a class="cont-r" href="#">Reservas<i id="ic-menu-resp" class="fas fa-chevron-down" aria-hidden="true"></i></a>
+						<ul class="submenu-r">
+							<li><a href="infReserva.html">¿Cómo reservar?</a></li>
+							<%if(!nombreUsuario) {%>
+								<li><a href="logueo.html">Reservar Ticket</a></li>
+								<li><a href="logueo.html">Ver mis Reservas</a></li>
+							<% }else{%>
+								<li><a href="reservacion.html">Reservar Ticket</a></li>
+								<li><a href="nuevo.html">Ver mis Reservas</a></li>
+							<% }%>
+
+							<li><a href="registro.html">Registrarse</a></li>
+							<li><a href="logueo.html">Loguearse</a></li>							
+						</ul>
+					</li>
+					<li class="drop-r">
+						<a class="cont-r" href="#"><img src="./img/es.png" alt="es" title="Español">&nbsp Español (España) <i id="ic-menu-resp" class="fas fa-chevron-down" aria-hidden="true"></i></a>
+						<ul class="submenu-r">
+							<li><a href="https://tiwanaku.gob.bo/?lang=en"><img src="./img/en.png" alt="en" title="English">&nbsp ENGLISH (INGLÉS)</a></li>							
+						</ul>	
+					</li>
+				</ul>
+
+			</div>
+			<!-- /NAV -->
+			</div>
+			<!-- /responsive-nav -->
+			
+		</nav>
+	<!-- / VENTANA MODAL Y MENU RESPOSIVE -->
+
+	<!-- Menu Toogle -->
+	<div class="menu-toggle">
+		<a href="#">
+			<div class="menu-togle-btn">
+				<i class="fas fa-bars"></i>
+			</div>
+		</a>
+		<%if(!nombreUsuario) {%>
+		<% }else{%>
+			<div class="div-usuario">
+				<label >¡ Bienvenido ! <%=nombreUsuario%></label>
+			</div>
+		<% }%>
+	</div>
+	<!-- /Menu Toogle -->
+	
+
+	<!-- BANER CARROUSEL-->
+	<div class="baner ">
+
+		<!-- NAVIGATION MENU -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container contenedor-menu">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul class="main-nav nav">
+						<li class="active nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+						<li class="drop nav-item"><a class="nav-link" href="#">Tiwanaku</a>
+							<div class="dropdownContain">
+								<div class="dropOut" id="dropOut1">
+									<ul class="submenu">
+										<li><a href="tiwanaku.html">Tiwanaku - Sitio arqueológico</a></li>
+										<li><a href="museos.html">Tiwanaku - Museos</a></li>
+										<li><a href="patrimonio.html">Patrimonio Mundial</a></li>
+										<li><a href="http://whc.unesco.org/en/list/567">Sitio Oficial de la UNESCO</a></li>
+										<li><a href="http://tiwanaku.gob.bo/backup19102018/lasmac2017">Lasmac 2017</a></li>							
+									</ul>	
+								</div>	
+							</div>
+						</li>
+						<li class="drop nav-item"><a class="nav-link" href="#">Información Turística</a>
+							<div class="dropdownContain">
+								<div class="dropOut" id="dropOut1">
+									<ul class="submenu">
+										<li><a href="como_llegar.html">¿Cómo llegar a Tiwanaku?</a></li>
+										<li><a href="circuito_turistico.html">Circuitos Turísticos</a></li>
+										<li><a href="hospedaje_restaurant.html">Hospedajes y restaurants</a></li>
+										<li><a href="servicios.html">Servicios - Preguntas frecuentes</a></li>							
+									</ul>	
+								</div>	
+							</div>
+						</li>
+						<li class="drop nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+						<li class="drop nav-item"><a class="nav-link" href="#">Multimedia</a>
+							<div class="dropdownContain">
+								<div class="dropOut" id="dropOut1">
+									<ul class="submenu">
+										<li><a href="galeria_fotografica.html">Galeria Fotográfica</a></li>							
+									</ul>	
+								</div>	
+							</div>
+						</li>
+						<li class="drop nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+						<li class="drop nav-item"><a class="nav-link" href="#">Reservas</a>
+							<div class="dropdownContain">
+								<div class="dropOut" id="dropOut1">
+									<ul class="submenu">
+										<li><a href="infReserva.html">Cómo reservar?</a></li>
+										<%if(!nombreUsuario) {%>
+											<li><a href="logueo.html">Reservar Ticket</a></li>
+											<li><a href="logueo.html">Ver mis Reservas</a></li>
+										<% }else{%>
+											<li><a href="reservacion.html">Reservar Ticket</a></li>
+											<li><a href="nuevo.html">Ver mis Reservas</a></li>
+										<% }%>
+										<li><a href="registro.html">Registrarse</a></li>
+										<li><a href="logueo.html">Loguearse</a></li>
+									</ul>	
+								</div>	
+							</div>
+						</li>
+						<li class="drop nav-item"><a class="nav-link" href="#"><img src="./img/es.png" alt="es" title="Español">&nbsp Español (España)</a>
+							<div class="dropdownContain">
+								<div class="dropOut" id="dropOut1">
+									<ul>
+										<li><a href="https://tiwanaku.gob.bo/?lang=en"><img src="./img/en.png" alt="en" title="English">&nbsp ENGLISH (INGLÉS)</a></li>							
+									</ul>	
+								</div>	
+							</div>
+						</li>
+						<!-- <%if(!nombreUsuario){%>
+							
+						<% } else{%>
+							<div class="div-logueo">
+									<li class="drop nav-item"><a class="nav-link" href="#"><i id="ic-logueo" class="fas fa-user-circle"></i><p><%=nombreUsuario%></p></a>
+										<div class="dropdownContain">
+											<div class="dropOut" id="dropOut1">
+												<ul class="submenu">
+													<li><a href="/logout">Cerrar sesión</a></li>
+												</ul>	
+											</div>	
+										</div>
+									</li>  
+							</div>
+						<% }%> -->
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /NAVIGATION -->
+
+    <section>            
+        <div class="container cont-reg">
+            <div class="section-panel row">
+                <div class="card col-md-12">
+                    <form action="/guardar-reserva" method="POST">
+                        <div class="card-header"> Nueva reserva</div>
+                        <div class="card-body">
+                            <!-- CALENDAR -->
+							<div class="main-wrapper row">   
+								
+								<div class="content-wrapper col-g-8">
+									<div class="container">
+										<div class="calendar-wrapper z-depth-2">
+											<div class="header-background">
+												<div class="calendar-header">
+													<a class="prev-button" id="prev">
+														<!-- <i class="material-icons">keyboard_arrow_left</i> -->
+														<i class="fa fa-angle-left"></i>
+													</a>
+													<a class="next-button" id="next">
+														<i class="fa fa-angle-right"></i>
+													</a>
+							
+													<div class="row header-title">
+														<div class="header-text">
+															<h3 id="month-name">February</h3>
+															<h5 id="todayDayName">Hoy es Viernes 7 Feb</h5>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="calendar-content">
+												<div id="calendar-table" class="calendar-cells">
+													<div id="table-header">
+														<div class="row">
+															<div class="col">Lun</div>
+															<div class="col">Mar</div>
+															<div class="col">Mie</div>
+															<div class="col">Jue</div>
+															<div class="col">Vie</div>
+															<div class="col">Sab</div>
+															<div class="col">Dom</div>
+														</div>
+													</div>
+							
+													<div id="table-body" class="">
+													</div>
+												</div>
+											</div>
+							
+											<div class="calendar-footer">
+												<div class="emptyForm" id="emptyForm">
+													<h4 id="emptyFormTitle">Cantidad de Ticket's</h4>
+													<a class="addEvent" id="changeFormButton">Añadir nuevo</a>
+												</div>
+
+												<div class="addForm" id="addForm">
+													<h4>Añadir tipo de ticket y cantidad</h4>
+													<div class="cal-footer-body">
+														<div class="group-inp">
+															<label for="eventTitleInput" >Cantidad ticket's Extranjero</label>
+															<input class="inp-calendar" id="eventExtranjero" type="number">
+														</div>
+
+														<div class="group-inp">
+															<label for="eventDescInput" >Cantidad Ticket's Adulto</label>
+															<input class="inp-calendar" id="eventAdulto" type="number">
+														</div>
+
+														<div class="group-inp">
+															<label for="eventDescInput" >Cantidad Ticket's Escolar</label>
+															<input class="inp-calendar" id="eventEscolar" type="number">   
+														</div>
+													</div>
+							
+													<div class="addEventButtons">
+														<a class="btn btn-dark btn-cal" id="addEventButton">Añadir</a>
+														<a class="btn btn-info btn-cal" id="cancelAdd">Cancelar</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="sidebar-wrapper col-lg-4" id="sidebar">
+										<div class="sidebar-title">
+											<h4>Reserva</h4>
+											<h5 id="eventDayName">Date</h5>
+										</div>
+										<div class="sidebar-msj" id="sidebar-msj">
+
+										</div>
+										<div class="sidebar-events" id="sidebarEvents">
+												<!-- <input  id="usuario" type="text" name="nombre" value="pepe"/> -->
+											<div class="empty-message" id="empty-message"></div>
+											<div class="empty-message-er" id="empty-message-er"></div>
+											
+										</div>
+										
+									</div>
+
+							</div>     
+							<!-- / CALENDAR --> 
+                        </div>
+                        <div class="card-footer">
+                            <div class="form-group row">
+                                <div class="col-sm-12 col-lg-12 col-xl-9">
+                                    <button type="submit" id="btn-us" class="btn btn-primary">Guardar</button>
+                                    <button type="button" id="btn-us2" class="btn btn-secondary">Limpiar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- / END CONTENIDO DE PÁGINA-->
+            
+    </section>
+
+    <!-- Footer-->
+	
+	<!--  / end Footer-->
+	
+	
+	<!-- jQuery Plugins -->
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/script.js"></script>
+	<script>
+		$(window).resize(function onResize(){
+			if($(window).width() < 991){
+				$('#login').modal('hide');		
+			}else{
+				$('body, #fade').removeAttr('style');
+				$('#responsive-navar').removeClass('active');
+				
+			}
+		});
+
+		var delay = (function(){
+			var timer = 0;
+			return function(callback, ms){
+				clearTimeout(timer);
+				timer = setTimeout(callback, ms);
+			};
+		})();
+		$(window).onResize(function(){ delay( function(){onResize();},100) });
+	</script>
+	<script>
+		
+		 $(document).ready(function(){
+			 var altura = $('#responsive-nav').offset().top;
+
+			$(window).bind('scroll', function() {
+			
+				  if ( $(window).scrollTop() > altura ) {
+					  $('#responsive-nav').addClass('fixed-menu');
+				  }
+				  else {
+					  $('#responsive-nav').removeClass('fixed-menu');
+				  }
+			 });
+		 });
+
+	</script>
+	
+	<script>
+		$('.menu-toggle > a').on('click', function (e) {
+			e.preventDefault();
+			$('#responsive-navar').toggleClass('active');
+			$("#fade").css("display", "block");
+		});
+
+		$(document).ready(function(){
+			$("#fade").on("click",function(){
+				$('#responsive-navar').toggleClass('active');
+				$("#fade").css("display", "none");
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			var Accordion = function(el, multiple) {
+				this.el = el || {};
+				// more then one submenu open?
+				this.multiple = multiple || false;
+				
+				var dropdownlink = this.el.find('.cont-r');
+				dropdownlink.on('click',
+								{ el: this.el, multiple: this.multiple },
+								this.dropdown);
+			};
+			
+			Accordion.prototype.dropdown = function(e) {
+				var $el = e.data.el,
+					$this = $(this),
+					//this is the ul.submenuItems
+					$next = $this.next();
+				
+				$next.slideToggle();
+				$this.parent().toggleClass('open');
+				
+				if(!e.data.multiple) {
+				//show only one menu at the same time
+				$el.find('.submenu-r').not($next).slideUp().parent().removeClass('open');
+				}
+			}
+			
+			var accordion = new Accordion($('.menu-responsive'), false);
+		});
+	</script>
+
+	<script src="./js/calendar.js"></script>
+	
+</body>
+</html>

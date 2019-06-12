@@ -1,0 +1,97 @@
+  
+<div class="main-wrapper row">   
+    
+    <div class="content-wrapper col-g-8">
+        <div class="container">
+            <div class="calendar-wrapper z-depth-2">
+                <div class="header-background">
+                    <div class="calendar-header">
+                        <a class="prev-button" id="prev">
+                            <!-- <i class="material-icons">keyboard_arrow_left</i> -->
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="next-button" id="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+  
+                        <div class="row header-title">
+                            <div class="header-text">
+                                <h3 id="month-name">February</h3>
+                                <h5 id="todayDayName">Hoy es Viernes 7 Feb</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-content">
+                    <div id="calendar-table" class="calendar-cells">
+                        <div id="table-header">
+                            <div class="row">
+                                <div class="col">Lun</div>
+                                <div class="col">Mar</div>
+                                <div class="col">Mie</div>
+                                <div class="col">Jue</div>
+                                <div class="col">Vie</div>
+                                <div class="col">Sab</div>
+                                <div class="col">Dom</div>
+                            </div>
+                        </div>
+  
+                        <div id="table-body" class="">
+                        </div>
+                    </div>
+                </div>
+  
+                <div class="calendar-footer">
+                    <div class="emptyForm" id="emptyForm">
+                        <h4 id="emptyFormTitle">Cantidad de Ticket's</h4>
+                        <a class="addEvent" id="changeFormButton">Añadir nuevo</a>
+                    </div>
+
+                    <div class="addForm" id="addForm">
+                        <h4>Añadir tipo de ticket y cantidad</h4>
+                        <div class="cal-footer-body">
+                            <div class="group-inp">
+                                <label for="eventTitleInput" >Cantidad ticket's Extranjero</label>
+                                <input class="inp-calendar" id="eventExtranjero" type="number">
+                            </div>
+
+                            <div class="group-inp">
+                                <label for="eventDescInput" >Cantidad Ticket's Adulto</label>
+                                <input class="inp-calendar" id="eventAdulto" type="number">
+                            </div>
+
+                            <div class="group-inp">
+                                <label for="eventDescInput" >Cantidad Ticket's Escolar</label>
+                                <input class="inp-calendar" id="eventEscolar" type="number">   
+                            </div>
+                        </div>
+  
+                        <div class="addEventButtons">
+                            <a class="btn btn-dark btn-cal" id="addEventButton">Añadir</a>
+                            <a class="btn btn-info btn-cal" id="cancelAdd">Cancelar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-wrapper col-lg-4" id="sidebar">
+            <div class="sidebar-title">
+                <h4>Reserva</h4>
+                <h5 id="eventDayName">Date</h5>
+            </div>
+            <div class="sidebar-msj" id="sidebar-msj">
+
+            </div>
+            <div class="sidebar-events" id="sidebarEvents">
+                    <!-- <input  id="usuario" type="text" name="nombre" value="pepe"/> -->
+                <div class="empty-message" id="empty-message"></div>
+                <div class="empty-message-er" id="empty-message-er"></div>
+                
+            </div>
+            
+        </div>
+
+</div>

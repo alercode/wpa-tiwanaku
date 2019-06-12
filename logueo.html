@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sitio oficial del Centro Espiritual y Político de la Cultura Tiwanaku / Official Site Spiritual and Political Center of the Tiwanaku Culture &#8211; El complejo arqueológico más grande de Bolivia / The largest archaeological complex in Bolivia</title>
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css"/>
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="./css/all.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="./css/estilos.css"/>
+
+	<meta name="theme-color" content="#F0DB4F">
+  	<meta name="MobileOptimized" content="width">
+  	<meta name="HandheldFriendly" content="true">
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+ 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<link rel="shortcut icon" type="image/png" href="./img/icon_16.png">
+  	<link rel="apple-touch-icon" href="./img/touch/icon_32x32.png">
+  	<link rel="apple-touch-startup-image" href="./img/icon_1024.png">
+	<link rel="manifest" href="./manifest.json">
+	  
+</head>
+<body >
+	<div class="contenedor">
+		<div class="fondo">
+			<!-- fornulario logueo-->
+			<form action="/logueo" id="loginForm" method="POST" autocomplete="off" class="full-box logInForm">
+				<p class="text-center"><i id="img-cab" class="fa fa-user-circle fa-5x"></i></p>
+				<p id="text-cab" class="text-center text-uppercase">Inicia sesión con tu cuenta</p>
+				<div class="group" for="inp">
+					<label class="label">E-mail</label>
+					<i class="ico-log	fas fa-envelope"></i>
+					<input class="inp form-control" name="usuario" id="name" type="text" placeholder="Escribe tú E-mail">
+				</div>
+				<div class="group">
+					<label class="label" for="UserPass">Contraseña</label>
+					<i class="ico-log fas fa-lock"></i>
+					<input class="inp form-control" name="clave" id="pass" type="password" placeholder="**************">
+				</div>
+				<div class="resp_login" id="resp_login">
+						<%= mensajeError%>
+				</div>
+				<div class="form-group text-center">
+					<input type="submit" value="Iniciar sesión" class="butn text-uppercase">
+                </div>
+                <div class="form-group text-center">
+                    <input type="button" value="Volver atras" onclick="location='index.html'" class="butn text-uppercase">
+                </div>
+			</form>
+			<!-- / end fornulario logueo-->
+		</div>
+	</div>
+	
+	
+	<!-- jQuery Plugins -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+	<!-- script para recojer parametros de la url -->
+	<script>
+		var QueryString = function () {
+		var query_string = {};
+		var query = window.location.search.substring(1);
+		var vars = query.split("&");
+		for (var i=0;i<vars.length;i++) {
+			var pair = vars[i].split("=");
+			if (typeof query_string[pair[0]] === "undefined") {
+			query_string[pair[0]] = decodeURIComponent(pair[1]);
+			} else if (typeof query_string[pair[0]] === "string") {
+			var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+			query_string[pair[0]] = arr;
+			} else {
+			query_string[pair[0]].push(decodeURIComponent(pair[1]));
+			}
+		}
+		return query_string;
+		}();
+
+	</script>
+	<script>
+		
+			$(window).on("load", function(){
+				if(QueryString.ms=="e1"){
+					$('#resp_login').html("No existe Usuario");
+				}else if(QueryString.ms == "e2"){
+					$('#resp_login').html("Clave incorrecta");
+				}
+			});
+		
+	</script>
+
+</body>
+</html>

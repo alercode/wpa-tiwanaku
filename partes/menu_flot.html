@@ -1,0 +1,116 @@
+<!-- VENTANA MODAL Y MENU RESPOSIVE-->
+<div id="fade" class="nav-responsive"></div>
+
+<nav>
+    <!-- responsive-nav -->
+    <div id="responsive-navar">
+        <!-- <div class="cab-menu-resp"> -->
+        <div class="full-box dashboard-sideBar-UserInfo">
+            <figure class="full-box">
+                <img src="./img/us.png" alt="UserIcon">
+                <figcaption class="text-center text-titles"><%=nombreUsuario%></figcaption>
+            </figure>
+            
+            <ul class="full-box list-unstyled text-center">
+                    <%if(!nombreUsuario){%>
+                        <li>
+                            <a href="/logueo">Logueo</a>
+                        </li>
+                        <li id="separador_menu"></li>
+                        <li>
+                            <a href="/registro" > Registrarse</a>
+                        </li>
+                    <% } else{%>
+                    <li>
+                        <a href="#!">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/logout" class="btn-exit-system">
+                            <i class="fas fa-power-off"></i>
+                        </a>
+                    </li>
+                <% }%>
+            </ul>
+        </div>
+        <!-- NAV -->
+        <div class="menu">
+
+        
+        <ul class="menu-responsive">
+            <li class="drop-r"><a class="cont-r" href="/">Inicio</a></li>
+            <li class="drop-r">
+                <a class="cont-r" href="#">Tiwanaku <i id="ic-menu-resp" class="fas fa-chevron-down" aria-hidden="true"></i></a>	
+                <ul class="submenu-r">
+                            <li><a href="/tiwanaku-sitio-arqueologico">Tiwanaku - Sitio arqueológico</a></li>
+                            <li><a href="/tiwanaku-museos">Tiwanaku - Museos</a></li>
+                            <li><a href="/patrimonio-mundial-de-la-humanidad">Patrimonio Mundial</a></li>
+                            <li><a href="http://whc.unesco.org/en/list/567">Sitio Oficial de la UNESCO</a></li>
+                            <li><a href="http://tiwanaku.gob.bo/backup19102018/lasmac2017">Lasmac 2017</a></li>							
+                        </ul>
+                    </li>
+                    <li class="drop-r">
+                        <a class="cont-r" href="#">Información Turística <i id="ic-menu-resp" class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="submenu-r">
+                            <li><a href="/como-llegar">¿Cómo llegar a Tiwanaku?</a></li>
+                            <li><a href="/circuitos-turisticos">Circuitos Turísticos</a></li>
+                            <li><a href="/hospedajes-y-restaurants-en-tiwanaku">Hospedajes y restaurants</a></li>
+                            <li><a href="/tiwanaku-servicios">Servicios - Preguntas frecuentes</a></li>							
+                        </ul>		
+                    </li>
+                    <li class="drop-r"><a class="cont-r" href="/eventos">Eventos</a></li>
+                    <li class="drop-r">
+                        <a class="cont-r" href="#">Multimedia <i id="ic-menu-resp" class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="submenu-r">
+                            <li><a href="/galeria-fotografica">Galeria Fotográfica</a></li>							
+                        </ul>		
+                    </li>
+                    <li class="drop-r"><a class="cont-r" href="/contacto-us">Contacto</a></li>
+                    <li class="drop-r">
+                        <a class="cont-r" href="#">Reservas<i id="ic-menu-resp" class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="submenu-r">
+                            <li><a href="/informacion-reserva">¿Cómo reservar?</a></li>
+                            <%if(!nombreUsuario) {%>
+                                <li><a href="/logueo">Reservar Ticket</a></li>
+                                <li><a href="/logueo">Ver mis Reservas</a></li>
+                            <% }else{%>
+                                <li><a href="/reserva-ticket">Reservar Ticket</a></li>
+                                <li><a href="/ver-reserva">Ver mis Reservas</a></li>
+                            <% }%>
+
+                            <li><a href="/registro">Registrarse</a></li>
+                            <li><a href="/logueo">Loguearse</a></li>							
+                        </ul>
+                    </li>
+                    <li class="drop-r">
+                        <a class="cont-r" href="#"><img src="./img/es.png" alt="es" title="Español">&nbsp Español (España) <i id="ic-menu-resp" class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="submenu-r">
+                            <li><a href="https://tiwanaku.gob.bo/?lang=en"><img src="./img/en.png" alt="en" title="English">&nbsp ENGLISH (INGLÉS)</a></li>							
+                        </ul>	
+                    </li>
+                </ul>
+
+            </div>
+                <!-- /NAV -->
+            </div>
+            <!-- /responsive-nav -->
+        
+    </nav>
+<!-- / VENTANA MODAL Y MENU RESPOSIVE -->
+
+<!-- Menu Toogle -->
+<div class="menu-toggle">
+    <a href="#">
+        <div class="menu-togle-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </a>
+    <%if(!nombreUsuario) {%>
+    <% }else{%>
+        <div class="div-usuario">
+            <label >¡ Bienvenido ! <%=nombreUsuario%></label>
+        </div>
+    <% }%>
+</div>
+<!-- /Menu Toogle -->

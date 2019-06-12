@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  /*============ Estilos generales*/
+  body, html{
+      background-color: #fff;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      font-size: 16px;
+      font-family: Arial, Helvetica, Verdana, Trebuchet, Tahoma;
+      overflow: hidden;
+  }
+  .contenedor{
+    position: absolute;
+    width:100%; 
+    height:100%;   
+    overflow: auto;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    background-image: url(../img/slid3a.jpg);  
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    background-color:#000;
+  }
+  .fondo{
+    width: 100%;
+    height: 100%;
+    background: rgba(68, 68, 68, 0.5);
+  }
+  .full-box{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      box-sizing: border-box;
+  }
+  
+  /*============ LogIn*/
+  .logInForm{
+      position: absolute;
+      color: #fff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 300px;
+      padding: 15px;
+      box-shadow: 0 0 3px rgba(0,0,0,.7);
+      border-radius: 0 0 2px 2px;
+      background-color: rgba(0, 0, 0, .7);
+  }
+  .logInForm p,
+  .logInForm label{
+      color: #FFF;
+  }
+  #img-cab{
+    margin-top: 20px;
+  }
+  #text-cab{
+    margin: 50px 50px;
+  }
+  .group{
+    position: relative;
+    margin-bottom: 25px;
+  }
+  .ico-log{
+    color:#999; 
+    font-size:18px;
+    position:absolute;
+    left:5px;
+    top:37px;
+  }
+  .inp{
+    padding: 0px 0px 0px 40px; 
+    background: none;
+    line-height: 2.4em;
+    color: #fff;
+    border-radius:0;
+    font-weight: 300;
+    letter-spacing: 0px;
+    letter-spacing: 0.02rem;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+  }
+  .inp:focus{
+    border-bottom: 1px solid rgba(226, 207, 34, 0.7);
+      box-shadow: none;
+      outline: 0 none;
+      background: none;
+      color: #fff;
+  }
+  
+  .butn {
+    margin-top: 15px;
+    font-size: 14px;
+    background: #aca51e;
+    background-image: -webkit-linear-gradient(top, #dbd229, #d4ba13);
+    background-image: -moz-linear-gradient(top, #dbd229, #d4ba13);
+    background-image: -ms-linear-gradient(top, #dbd229, #d4ba13);
+    background-image: -o-linear-gradient(top, #dbd229, #d4ba13);
+    background-image: linear-gradient(to bottom, #dbd229, #b8a10b);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    font-family: Arial;
+    color: #ffffff;
+    border: solid #f5cf11 0px;
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+  }
+  
+  .butn:hover {
+    background: #fce23c;
+    background-image: -webkit-linear-gradient(top, #fce23c, #d9cb34);
+    background-image: -moz-linear-gradient(top, #fce23c, #d9cb34);
+    background-image: -ms-linear-gradient(top, #fce23c, #d9cb34);
+    background-image: -o-linear-gradient(top, #fce23c, #d9cb34);
+    background-image: linear-gradient(to bottom, #fce23c, #d9cb34);
+    text-decoration: none;
+  }
+  
+  
+  
+  
+  
+      
+    
